@@ -8,19 +8,22 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: '1rem',
+      padding: "1rem",
     },
     extend: {
       colors: {
-        'yellow-primary': '#FECA2F',
-        'blue-primary': '#190F40',
+        "yellow-primary": "#FECA2F",
+        "blue-primary": "#190F40",
       },
       fontFamily: {
-        'BebasNeue': ['BebasNeue', 'sans-serif'],
-        'Poppins': ['Poppins', 'sans-serif'],
-        'PoppinsLight': ['PoppinsLight', 'sans-serif'],
+        BebasNeue: ["BebasNeue", "sans-serif"],
+        Poppins: ["Poppins", "sans-serif"],
+        PoppinsLight: ["PoppinsLight", "sans-serif"],
+      },
+      maxWidth: {
+        "8xl": "1440px",
       },
     },
   },
   plugins: [],
-}
+};
