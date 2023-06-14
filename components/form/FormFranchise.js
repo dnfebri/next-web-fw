@@ -19,7 +19,12 @@ export const FormFranchise = () => {
   }
 
   const rupiah = (number)=>{
-    return new Intl.NumberFormat().format(number);
+    const n = new Intl.NumberFormat("id-ID", {
+      style: "currency",
+      maximumSignificantDigits: 3,
+      currency: "IDR"
+    }).format(number)
+    return n
   }
 
   const saveData = async () => {
@@ -67,7 +72,7 @@ export const FormFranchise = () => {
           alt="Franchise"
           fill
           style={{className:"w-full"}}
-          objectFit="contain" // change to suit your needs
+          // objectFit="contain" // change to suit your needs
         />
       </div>
       <div className="my-4 lg:px-4 text-sm lg:w-md">
@@ -87,10 +92,10 @@ export const FormFranchise = () => {
                       <option value={dana.value} key={dana.id}>
                         {
                           dana.id == 4 ?
-                          "Rp " + rupiah(dana.value) + " - " + rupiah(5000000000)
+                          rupiah(dana.value) + " - " + rupiah(5000000000)
                           : dana.id == 5 ?
-                          "> Rp " + rupiah(dana.value) 
-                          : "Rp " + rupiah(dana.value)
+                          "> " + rupiah(dana.value) 
+                          : rupiah(dana.value)
                         }
                       </option>
                     )

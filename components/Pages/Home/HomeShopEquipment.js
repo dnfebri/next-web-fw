@@ -5,6 +5,7 @@ import ButtonLink from '../../ButtonLink'
 const rpPrice = (el) => {
   const n = new Intl.NumberFormat("id-ID", {
     style: "currency",
+    maximumSignificantDigits: 3,
     currency: "IDR"
   }).format(el)
   return n
